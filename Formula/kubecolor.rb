@@ -5,16 +5,16 @@
 class Kubecolor < Formula
   desc "Colorize your kubectl output"
   homepage "https://github.com/dty1er/kubecolor"
-  version "0.0.11"
+  version "0.0.12"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.11/kubecolor_0.0.11_Darwin_x86_64.tar.gz"
-    sha256 "02206cb0bd76aa6519c538a309a6561276ccec563bb62c2497b3c6d2e5e08cc7"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.12/kubecolor_0.0.12_Darwin_x86_64.tar.gz"
+    sha256 "bcdb081696837da6ec7b275e8e9239a51d32b85e67c9261dfe93cef324e83856"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.11/kubecolor_0.0.11_Linux_x86_64.tar.gz"
-    sha256 "767f504f6d68743611343909fd816800c7c5ca3407da3bb7892d37be2894ba6e"
+    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.12/kubecolor_0.0.12_Linux_x86_64.tar.gz"
+    sha256 "3008b902c75e471c217c4b48d7804814d389f65b8c2849a6451e29e3a7a227b1"
   end
 
   def install
