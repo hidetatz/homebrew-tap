@@ -5,16 +5,20 @@
 class Kubecolor < Formula
   desc "Colorize your kubectl output"
   homepage "https://github.com/dty1er/kubecolor"
-  version "0.0.16"
+  version "0.0.17"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.16/kubecolor_0.0.16_Darwin_x86_64.tar.gz"
-    sha256 "64ee90e378359906274a3989c24d784a512ac26a030cc3d31e7ae0c5b55935a6"
+    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.17/kubecolor_0.0.17_Darwin_x86_64.tar.gz"
+    sha256 "9ea214131ed7aa8dc88bd43b5890b44bbfb37491d0ec400bef0aac9ee784931c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.16/kubecolor_0.0.16_Linux_x86_64.tar.gz"
-    sha256 "d32014d546cfa8755e097c0ee3b62f21b71a1122b0dd0cba87546e4838b67f85"
+    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.17/kubecolor_0.0.17_Linux_x86_64.tar.gz"
+    sha256 "ca8b89564892309d3868b75fbf10cf677dfcbce7e54c428378bc8dafc7c6e5c7"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/dty1er/kubecolor/releases/download/v0.0.17/kubecolor_0.0.17_Linux_arm64.tar.gz"
+    sha256 "b9218e105d6d107365c2ed1fff76d327d2633d950a868f16fd09e9343b700130"
   end
 
   def install
