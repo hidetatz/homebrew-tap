@@ -6,7 +6,6 @@ class Kubecolor < Formula
   desc "Colorize your kubectl output"
   homepage "https://github.com/dty1er/kubecolor"
   version "0.0.20"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/dty1er/kubecolor/releases/download/v0.0.20/kubecolor_0.0.20_Darwin_x86_64.tar.gz"
