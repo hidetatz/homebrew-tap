@@ -5,20 +5,20 @@
 class Kubecolor < Formula
   desc "Colorize your kubectl output"
   homepage "https://github.com/hidetatz/kubecolor"
-  version "0.0.24"
+  version "0.0.25"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.24/kubecolor_0.0.24_Darwin_x86_64.tar.gz"
-      sha256 "4442dc127cd51b33084a1ee7a0711a063c0b43262be964f91211f8717362f7b6"
+    if Hardware::CPU.arm?
+      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.25/kubecolor_0.0.25_Darwin_arm64.tar.gz"
+      sha256 "536385c9269f8c7f6a91044310710d1b2fad451a5b7640a67e67e4fffba17980"
 
       def install
         bin.install "kubecolor"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.24/kubecolor_0.0.24_Darwin_arm64.tar.gz"
-      sha256 "492ae4e7d91f96a78738ea12251322a6eae9a4990c14055a07f2fdc6776a0ec3"
+    if Hardware::CPU.intel?
+      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.25/kubecolor_0.0.25_Darwin_x86_64.tar.gz"
+      sha256 "ecf6605f25aaa7bb8806690d7817eda0957e4e5359118ff7b3c7aef6e1f46848"
 
       def install
         bin.install "kubecolor"
@@ -28,16 +28,16 @@ class Kubecolor < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.24/kubecolor_0.0.24_Linux_x86_64.tar.gz"
-      sha256 "80ec0b02531f8898798e8dc3d4d3f85cde684f8d0cbdfe39c368382d321323d0"
+      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.25/kubecolor_0.0.25_Linux_x86_64.tar.gz"
+      sha256 "c126077e765ead50cfeca8e39886ddeee83c882cb54df726191f6762007a8015"
 
       def install
         bin.install "kubecolor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.24/kubecolor_0.0.24_Linux_arm64.tar.gz"
-      sha256 "94d3aab30ce358be105c9c3d851a8d158037c09bded0decd5094405f17e9154b"
+      url "https://github.com/hidetatz/kubecolor/releases/download/v0.0.25/kubecolor_0.0.25_Linux_arm64.tar.gz"
+      sha256 "e6d2c379bf2ecd303a87e2be52d72fa37b02b0892e02c4a673615701e51e544b"
 
       def install
         bin.install "kubecolor"
